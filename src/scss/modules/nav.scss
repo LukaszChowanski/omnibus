@@ -1,0 +1,106 @@
+@mixin links {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: medium;
+    font-family: $ff-links;
+
+    color: $c-links;
+    text-decoration: none;
+}
+
+@mixin button($color: white, $border: white, $bgc: transparent) {
+    display: flex;
+    align-items: center;
+
+    color: $color;
+    padding: 0 2rem;
+    text-decoration: none;
+    border: 1px solid $border;
+    border-radius: 4px;
+    background-color: $bgc;
+
+    &:hover {
+        color: white;
+    }
+}
+
+body {
+    background-color: $c-background;
+}
+
+.mainNav {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    grid-template-rows: 60px;
+    column-gap: 72px;
+
+    margin-top: 60px;
+
+    &__leftColumn {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__rightColumn {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        width: 202px;
+
+        &--shopingBag {
+            width: 18px;
+            height: 18px;
+        }
+
+        &--user {
+            width: 157px;
+            height: 48px;
+        }
+    }
+
+    &__flexContainer {
+        //reset default style
+        list-style-type: none;
+        margin-bottom: 0;
+        padding-left: 0;
+
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    &__flexElement {
+        &--userArea {
+            display: flex;
+            gap: 20px;
+        }
+    }
+
+    &__navLink {
+        @include links;
+        text-transform: uppercase;
+
+        &:hover {
+            color: $c-links;
+        }
+    }
+}
+
+.userArea {
+    &__shopingBag {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 48px;
+        width: 48px;
+        background-color: #898F97;
+        border-radius: 4px;
+    }
+
+    &__customers {
+        @include button(red, red, transparent);
+    }
+}
