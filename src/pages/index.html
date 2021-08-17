@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WTF: Webpack starter kit</title>
+    <title>Omnibus</title>
     <meta name="description" content="Your project description" />
     <!-- Title -->
     <meta property="og:title" content="" />
@@ -28,8 +28,19 @@
          <div class="mainNav__leftColumn">
            <img src="../assets/img/logo.svg" alt="omnibus logo" class="mainNav__logo">
            <ul class="mainNav__flexContainer">
-             <li class="mainNav__flexElement">
+             <li class="mainNav__flexElement mainNav__flexElement--dropdown">
                 <a href="#" class="mainNav__navLink">Oferta</a> 
+                <ul class="dropdown">
+                  <li class="dropdown__element">
+                    <a href="#" class="mainNav__navLink">Wynajem</a>
+                  </li>
+                  <li class="dropdown__element">
+                    <a href="#" class="mainNav__navLink">Rozkład jazdy</a>
+                  </li>
+                  <li class="dropdown__element">
+                    <a href="#" class="mainNav__navLink">Wynajem</a>
+                  </li>
+                </ul>
             </li>
              <li class="mainNav__flexElement">
                <a href="#" class="mainNav__navLink">Aktualności</a>
@@ -40,9 +51,9 @@
            </ul>
          </div>
          <div class="mainNav__rightColumn">
-           <ul class="mainNav__flexContainer">
+           <ul class="mainNav__flexContainer mainNav__flexContainer--rightMenu">
              <li class="mainNav__flexElement">
-               <a href="#" class="mainNav__navLink">Kontakt</a>
+               <a class="mainNav__navLink mainNav__navLink--white">Kontakt</a>
              </li>
              <li class="mainNav__flexElement mainNav__flexElement--userArea userArea">
                <a href="#" class="userArea__customers">Panel klienta</a>
@@ -53,11 +64,232 @@
            </ul>
          </div>
        </nav>
+      <!-- mobile nav -->
+       <nav class="mobileNav">
+         <div class="mobileNav__top">
+
+            <div class="mobileNav__content container">
+
+              <div class="menu-btn">
+                <div class="menu-btn__burger"></div>
+              </div>
+      
+              <a href="#">
+                <img src="../assets/img/logo.svg" alt="omnibus logo" class="mobileNav__logo--medium">
+                <img src="../assets/icons/bg-logo.svg" alt="omnibus logo" class="mobileNav__logo--small">
+              </a>
+      
+               <ul class="mobileNav__flexContainer">
+                 <li class="mobileNav__flexElement">
+                   <a href="#">
+                     <img src="../assets/icons/add-user.svg" alt="add user" class="mainNav__logo--shopingBag">
+                   </a>
+                 </li>
+                 <li class="mobileNav__flexElement mobileNav__flexElement--darkBackground">
+                   <a href="#">
+                     <img src="../assets/icons/shopping-bag.svg" alt="shoping bag" class="mainNav__logo--shopingBag">
+                   </a>
+                 </li>
+               </ul> 
+
+            </div>
+          </div>
+          <div class="mobileNav__bottomContainer">
+            <ul class="mobileNav__burger container">
+             <li class="mobileNav__menuElement mainNav__flexElement--dropdown">
+                <a href="#" class="mobileNav__navLink">Oferta</a> 
+                <ul class="dropdown">
+                  <li class="dropdown__element">
+                    <a href="#" class="mobileNav__navLink">Wynajem</a>
+                  </li>
+                  <li class="dropdown__element">
+                    <a href="#" class="mobileNav__navLink">Rozkład jazdy</a>
+                  </li>
+                  <li class="dropdown__element">
+                    <a href="#" class="mobileNav__navLink">Wynajem</a>
+                  </li>
+                </ul>
+            </li>
+             <li class="mobileNav__menuElement">
+               <a href="#" class="mobileNav__navLink">Aktualności</a>
+              </li>
+             <li class="mobileNav__menuElement">
+               <a href="#" class="mobileNav__navLink">O nas</a>
+              </li>
+           </ul>
+
+           <ul class="mobileNav__contactData container">
+             <li class="mobileNav__contactDataElement">
+               <a href="tel:605896197" class="mobileNav__navLink mobileNav__navLink--small">605 896 197</a>
+             </li>
+             <li class="mobileNav__contactDataElement">
+              <a href="mailto:biuro@omni-bus.pl" class="mobileNav__navLink mobileNav__navLink--small">biuro@omni-bus.pl</a>
+            </li>
+           </ul>
+
+           <p class=mobileNav__footer>2021 OMNI-BUS ALL RIGHT RESERVED.</p>
+          </div>
+
+        </nav>
     </header>
-    <div class="container">
-    </div>
+    <main>
+      <section class="hero container">
+        <div class="hero__bgcContainer">
+          <div class="hero__orangeSquare">
+              <img src="../assets/img/Clip.svg" alt="city" class="desktop">
+              <img src="../assets/img/Clip-orange.svg" alt="city" class="mobile">
+          </div>
+        </div>
+
+        <section class="hero__content">
+          <div class="hero__text">
+            <h1 class="hero__heading">The chipest tickets On the internet,period</h1>
+            <p class="hero__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit, sed diam nonumyeirmod tempor invidunt. </p>
+          </div>
+          <img src="../assets/img/pngkit_bus-image-png_2515711.png" alt="autobus">
+        </section>
+
+        <!-- form -->
+
+        <form class="hero__form">
+          <h4 class="hero__formHeading">
+            Wybierz termin
+          </h4>
+          <div class="hero__inputsContainer inputs">
+
+            <div class="select-box select-box--whereFrom">
+
+              <div class="options-container">
+                <div class="option defaultOption">
+                  <input type="radio" class="radio defaultInput"  id="default-1" name="whereFrom"
+                  />
+                  <p class="defaultOption__heading">Skąd jedziesz ?</p>
+                  <label for="default" class="default">
+                      Wybierz lokalizacje
+                  </label>
+                </div>
+
+                <div class="option">
+                  <input type="radio" class="radio"  id="whereFrom-1" name="whereFrom"
+                  />
+                  <label for="loc-1">Warszawa lotnisko</label>
+                </div>
+      
+                <div class="option">
+                  <input type="radio" class="radio" id="whereFrom-2" name="whereFrom" />
+                  <label for="loc-2">Warszawa - Pałac Kultury i Nauki</label>
+                </div>
+      
+                <div class="option">
+                  <input type="radio" class="radio" id="whereFrom-3" name="whereFrom" />
+                  <label for="loc-3">Warszawa - Dworzec Wileński</label>
+                </div>
+      
+                <div class="option">
+                  <input type="radio" class="radio" id="whereFrom-4" name="whereFrom" />
+                  <label for="loc-4">Ostrów Mazowiecka</label>
+                </div>
+      
+                <div class="option">
+                  <input type="radio" class="radio" id="whereFrom-5" name="whereFrom" />
+                  <label for="loc-6">Zambrów</label>
+                </div>
+              </div>
+              <!-- options container  -->
+              
+            </div> 
+            <!-- select box -->
+
+            <div class="select-box select-box--whereTo">
+              <div class="options-container">
+                <div class="option defaultOption">
+                  <input type="radio" class="radio defaultInput"  id="default-2" name="whereTo"
+                  />
+                  <p class="defaultOption__heading">Miejsce docelowe</p>
+                  <label for="default" class="default">
+                    Wybierz lokalizacje
+                  </label>
+                </div>
+
+                <div class="option">
+                  <input type="radio" class="radio"  id="whereTo-1" value="costamn1" name="whereTo"
+                  />
+                  <label for="whereTo-1">Warszawa lotnisko</label>
+                </div>
+      
+                <div class="option">
+                  <input type="radio" class="radio" id="whereTo-2" value="costamn2" name="whereTo" />
+                  <label for="whereTo-2">Warszawa - Pałac Kultury i Nauki</label>
+                </div>
+      
+                <div class="option">
+                  <input type="radio" class="radio" id="whereTo-3" value="costamn3" name="whereTo" />
+                  <label for="whereTo-3">Warszawa - Dworzec Wileński</label>
+                </div>
+      
+                <div class="option">
+                  <input type="radio" class="radio" id="whereTo-4" value="costamn4" name="whereTo" />
+                  <label for="whereTo-4">Ostrów Mazowiecka</label>
+                </div>
+      
+                <div class="option">
+                  <input type="radio" class="radio" id="whereTo-5" value="costamn5" name="whereTo" />
+                  <label for="whereTo-5">Zambrów</label>
+                </div>
+              </div>
+              <!-- options container  -->
+              
+              
+            </div> 
+            <!-- select box -->
+
+            <div class="data-picker">
+              <div class="data-picker__container">
+                <p class="data-picker__heading">ODJAZD</p>
+  
+                <input type="date" name="data-picker--departure" id="data-picker--departure" placeholder="Podaj termin" autocomplete="off">
+
+                <button class="data-picker__addReturnDate">dodaj powrót</button>
+              </div>
+
+              <div class="data-picker__container">
+                <p class="data-picker__heading data-picker__heading--return">powrót</p>
+                <input type="date" name="data-picker--return" id="data-picker--return" placeholder="Podaj termin" autocomplete="off">
+              </div>
+            </div>
+
+            <div class="passengersCount">
+              <div class="passengersCount__container">
+                <div class="passengersCount__labelContainer">
+                  <p class="passengersCount__heading">liczba</p>
+                  <label for="passengersCount">Pasażerowie</label>
+                </div>
+                <input type="number" name="passengersCount" id="passengersCount" value=1>
+              </div>
+              <input type="submit" value="Wyszukaj">
+            </div>
+
+          </div>
+          <!-- inputs -->
+        </form>
+      </section>
+    </main>
   </body>
 </html>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+  let form = document.querySelector('form');
+
+  form.onsubmit = onSubmit;
+  
+  function onSubmit(e) {
+    e.preventDefault()
+    let data = new FormData(form);
+    let dataObj = Object.fromEntries(data)
+  }
+
+</script>

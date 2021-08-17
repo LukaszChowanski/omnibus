@@ -1,9 +1,51 @@
 $wtf: #2D2241;
 
+$ff-links: "Open sans";
+$ff-headings: "Open sans";
+$ff-paragraphs: "Open sans";
 
+$c-headings: #000000;
+$c-headings-light: #B3B3B3;
 
-$c-background: #F3F6F8;
+$c-paragraphs: #898F97;
 
 $c-links: #898F97;
 
-$ff-links: "Open sans";
+$c-background: #F3F6F8;
+$c-background-colored: #EAAD31;
+$c-border: #E4E4E4;
+$c-border-dark: #898F97;
+$c-borer-colored: #EAAD31;
+$c-inputHover: #EAAD31;
+
+
+
+h1 {
+    font: normal normal 600 32px/38px $ff-headings;
+    color: $c-headings;
+    //sfpro
+}
+
+h2 {
+    font: normal normal 600 32px/38px $ff-headings;
+    color: $c-headings;
+}
+
+h3 {
+    font: normal normal 600 24px/29px $ff-headings;
+    color: $c-headings;
+}
+
+h4 {
+    font: normal normal 600 14px/22px $ff-headings;
+    color: $c-headings;
+}
+
+h5 {
+    font: normal normal 600 12px/18px $ff-headings;
+}
+
+p {
+    font: normal normal normal 16px/24px $ff-paragraphs;
+    color: $c-paragraphs;
+}

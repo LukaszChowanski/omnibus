@@ -1,6 +1,32 @@
 @import "~normalize.css";
 
 @import "_variables";
-@import "modules/hello.scss";
+@import "modules/mixins.scss";
 
-@import "modules/nav.scss"
+@import "modules/nav.scss";
+@import "modules/hero.scss";
+@import "modules/burger.scss";
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  background-image: url('../assets/icons/bg-logo2.svg');
+  background-size: 60% auto;
+  background-repeat: no-repeat;
+  background-color: $c-background;
+
+  @include breakpoint(medium) {
+    background-size: 100% auto;
+    background-position-y: -100px;
+  }
+
+  @include breakpoint(small) {
+    background-position-y: -10px;
+    background-position-x: 50%;
+    background-size: 200% auto;
+  }
+}
+.burgerMenu {
+  grid-row: 2;
+}
