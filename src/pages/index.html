@@ -4,22 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Omnibus</title>
-    <meta name="description" content="Your project description" />
-    <!-- Title -->
-    <meta property="og:title" content="" />
-    <!-- OPTIONAL description. 2-4 sentences. -->
-    <meta property="og:description" content="" />
-    <!-- full url with http(s) ie. https://maciejkorsan.github.io/my-repo/ -->
-    <meta property="og:url" content="" />
-    <!-- full url to the image with http(s) ie. https://maciejkorsan.github.io/my-repo/assets/img/fb.png. Facebook suggests at least 1200 x 630. -->
-    <meta
-      property="og:image"
-      content="https://maciejkorsan.com/wtf-gulp-starter/assets/img/cover.png"
-    />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-
-    <link href="//db.onlinewebfonts.com/c/f03bfcde0145e839b388117cdbb23489?family=Moriston+Personal+Black" rel="stylesheet" type="text/css"/>
 
   </head>
   <body>
@@ -59,6 +45,7 @@
                <a href="#" class="userArea__customers">Panel klienta</a>
                <a href="#" class="userArea__shopingBag">
                  <img src="../assets/icons/shopping-bag.svg" alt="shoping bag" class="mainNav__logo--shopingBag">
+                 <p class="counter"></p>
                </a>
              </li>
            </ul>
@@ -172,27 +159,27 @@
                 <div class="option">
                   <input type="radio" class="radio"  id="whereFrom-1" name="whereFrom"
                   />
-                  <label for="loc-1">Warszawa lotnisko</label>
+                  <label for="whereFrom-1">Warszawa lotnisko</label>
                 </div>
       
                 <div class="option">
                   <input type="radio" class="radio" id="whereFrom-2" name="whereFrom" />
-                  <label for="loc-2">Warszawa - Pałac Kultury i Nauki</label>
+                  <label for="whereFrom-2">Warszawa - Pałac Kultury i Nauki</label>
                 </div>
       
                 <div class="option">
                   <input type="radio" class="radio" id="whereFrom-3" name="whereFrom" />
-                  <label for="loc-3">Warszawa - Dworzec Wileński</label>
+                  <label for="whereFrom-3">Warszawa - Dworzec Wileński</label>
                 </div>
       
                 <div class="option">
                   <input type="radio" class="radio" id="whereFrom-4" name="whereFrom" />
-                  <label for="loc-4">Ostrów Mazowiecka</label>
+                  <label for="whereFrom-4">Ostrów Mazowiecka</label>
                 </div>
       
                 <div class="option">
                   <input type="radio" class="radio" id="whereFrom-5" name="whereFrom" />
-                  <label for="loc-6">Zambrów</label>
+                  <label for="whereFrom-6">Zambrów</label>
                 </div>
               </div>
               <!-- options container  -->
@@ -273,23 +260,280 @@
           <!-- inputs -->
         </form>
       </section>
+      <!-- hero end -->
+
+      <section class="courses">
+        <div class="courses__content container">
+          <h4 class="courses__contentHeading">Wyniki wyszukiwania</h4>
+          <ul class="courses__coursesList"></ul>
+          <ul class="courses__coursesList courses__coursesList--return"></ul>
+        </div>
+      </section>
+
     </main>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 
 <script type="text/javascript">
 
-  let form = document.querySelector('form');
+const courses = {"courses":[{"id":37,"free_places":50,"departure_date":"2021-08-19","departure_time":"04:00:00","arrival_date":"2021-08-19","arrival_time":"04:25:00","time":"00:25:00","active":0,"price":"25.25","from_bus_stop_name":"Bia\u0142ystok - Dworzec PKS","to_bus_stop_name":"Je\u017cewo Stare","course_id":3,"discounts":[{"id":1,"name":"Zni\u017cka internetowa 10%","description":"Ulga przys\u0142uguje wszystkim bez ogranicze\u0144, o ile nie nale\u017c\u0105 si\u0119 im inne ulgi.","price":null,"percentage_discount":10,"amount_discount":null,"pivot":{"discountable_id":37,"discount_id":1,"discountable_type":"App\\Models\\CourseSegment"}}],"promotional_tickets":[{"id":5,"course_id":3,"name":"Bilet za 1 z\u0142","price":"1.00","quantity":1,"remaining_quantity":1},{"id":6,"course_id":3,"name":"Bilet za 5 z\u0142","price":"5.00","quantity":1,"remaining_quantity":1}]},{"id":595,"free_places":50,"departure_date":"2021-08-19","departure_time":"07:00:00","arrival_date":"2021-08-19","arrival_time":"07:25:00","time":"00:25:00","active":0,"price":"25.00","from_bus_stop_name":"Bia\u0142ystok - Dworzec PKS","to_bus_stop_name":"Je\u017cewo Stare","course_id":34,"discounts":[{"id":1,"name":"Zni\u017cka internetowa 10%","description":"Ulga przys\u0142uguje wszystkim bez ogranicze\u0144, o ile nie nale\u017c\u0105 si\u0119 im inne ulgi.","price":null,"percentage_discount":10,"amount_discount":null,"pivot":{"discountable_id":595,"discount_id":1,"discountable_type":"App\\Models\\CourseSegment"}}],"promotional_tickets":[{"id":67,"course_id":34,"name":"Bilet za 1 z\u0142","price":"1.00","quantity":1,"remaining_quantity":1},{"id":68,"course_id":34,"name":"Bilet za 5 z\u0142","price":"5.00","quantity":1,"remaining_quantity":1}]},{"id":1153,"free_places":50,"departure_date":"2021-08-19","departure_time":"10:00:00","arrival_date":"2021-08-19","arrival_time":"10:25:00","time":"00:25:00","active":0,"price":"25.00","from_bus_stop_name":"Bia\u0142ystok - Dworzec PKS","to_bus_stop_name":"Je\u017cewo Stare","course_id":65,"discounts":[{"id":1,"name":"Zni\u017cka internetowa 10%","description":"Ulga przys\u0142uguje wszystkim bez ogranicze\u0144, o ile nie nale\u017c\u0105 si\u0119 im inne ulgi.","price":null,"percentage_discount":10,"amount_discount":null,"pivot":{"discountable_id":1153,"discount_id":1,"discountable_type":"App\\Models\\CourseSegment"}}],"promotional_tickets":[{"id":129,"course_id":65,"name":"Bilet za 1 z\u0142","price":"1.00","quantity":1,"remaining_quantity":1},{"id":130,"course_id":65,"name":"Bilet za 5 z\u0142","price":"5.00","quantity":1,"remaining_quantity":1}]},{"id":1711,"free_places":50,"departure_date":"2021-08-19","departure_time":"14:00:00","arrival_date":"2021-08-19","arrival_time":"14:25:00","time":"00:25:00","active":0,"price":"25.00","from_bus_stop_name":"Bia\u0142ystok - Dworzec PKS","to_bus_stop_name":"Je\u017cewo Stare","course_id":96,"discounts":[{"id":1,"name":"Zni\u017cka internetowa 10%","description":"Ulga przys\u0142uguje wszystkim bez ogranicze\u0144, o ile nie nale\u017c\u0105 si\u0119 im inne ulgi.","price":null,"percentage_discount":10,"amount_discount":null,"pivot":{"discountable_id":1711,"discount_id":1,"discountable_type":"App\\Models\\CourseSegment"}}],"promotional_tickets":[{"id":191,"course_id":96,"name":"Bilet za 1 z\u0142","price":"1.00","quantity":1,"remaining_quantity":1},{"id":192,"course_id":96,"name":"Bilet za 5 z\u0142","price":"5.00","quantity":1,"remaining_quantity":1}]},{"id":2269,"free_places":50,"departure_date":"2021-08-19","departure_time":"18:00:00","arrival_date":"2021-08-19","arrival_time":"18:25:00","time":"00:25:00","active":0,"price":"25.00","from_bus_stop_name":"Bia\u0142ystok - Dworzec PKS","to_bus_stop_name":"Je\u017cewo Stare","course_id":127,"discounts":[{"id":1,"name":"Zni\u017cka internetowa 10%","description":"Ulga przys\u0142uguje wszystkim bez ogranicze\u0144, o ile nie nale\u017c\u0105 si\u0119 im inne ulgi.","price":null,"percentage_discount":10,"amount_discount":null,"pivot":{"discountable_id":2269,"discount_id":1,"discountable_type":"App\\Models\\CourseSegment"}}],"promotional_tickets":[{"id":253,"course_id":127,"name":"Bilet za 1 z\u0142","price":"1.00","quantity":1,"remaining_quantity":1},{"id":254,"course_id":127,"name":"Bilet za 5 z\u0142","price":"5.00","quantity":1,"remaining_quantity":1}]}],"token":"3e372d9e-a59b-449e-819f-3cb34ff2eb50"};
 
+
+  // append function to form
+  let form = document.querySelector('form');
   form.onsubmit = onSubmit;
+  //courses list
+  const coursesList = document.querySelector('.courses__coursesList'),
+        returnCoursesList = document.querySelector('.courses__coursesList--return'),
+        coursesSection = document.querySelector('.courses'),
+        coursesHeading = document.querySelector('.courses__contentHeading')
+        returnDate = document.querySelector('#data-picker--return'),
+        counter = document.querySelector('.counter')
+
+  let previousData = null,
+      interval = null,
+      buyNowButtons = [],
+      buyNowButtonsReturn = []
+
+function startTimer(duration, display) {
+var start = Date.now(),
+diff,
+minutes,
+seconds;
+
+function timer() {
+    // get the number of seconds that have elapsed since 
+    // startTimer() was called
+    diff = duration - (((Date.now() - start) / 1000) | 0);
+
+    // does the same job as parseInt truncates the float
+    minutes = (diff / 60) | 0;
+    seconds = (diff % 60) | 0;
+
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+    display.textContent = minutes + ":" + seconds; 
+
+      if (diff <= 0) {
+          
+      }
+    }
+    // we don't want to wait a full second before the timer starts
+    timer();
+    interval = setInterval(timer, 1000);
+}
+
+
+function fillList(data, coursesList) {
+
+      //set heading course list
+      const {from_bus_stop_name, to_bus_stop_name} = data[0];
+      coursesHeading.textContent = `Przejazd z: ${from_bus_stop_name} do ${to_bus_stop_name}`
+
+
+      data.map( item => {
+        
+        if( item.free_places == 0) return
+  
+        const { departure_date, departure_time, from_bus_stop_name, arrival_time, to_bus_stop_name, time, price: regularPrice, discounts, promotional_tickets } = item 
+  
+        //price
+        const { percentage_discount } = discounts[0] != undefined ? discounts[0] : 0;
+        const priceAfterDiscount = (parseFloat(regularPrice)*((100-percentage_discount)/100)).toFixed(2)
+  
+        //promotional prices
+        let lowestPrice = parseFloat(priceAfterDiscount)
+  
+        promotional_tickets.map( ({price, remaining_quantity}) => {
+          const promotionalPriceNumber = parseFloat(price)
+          if(remaining_quantity == 0) return 
+  
+          if( lowestPrice > promotionalPriceNumber) {
+            lowestPrice = promotionalPriceNumber
+          }
+        })
+  
+        //duration
+        const [hours, minutes] = time.split(':')
+        
+        //date
+        const d_date = new Date(departure_date)
+        const d_date_year = d_date.getFullYear()
+        const d_date_month = months[d_date.getUTCMonth()]
+        const d_date_day = d_date.getUTCDay()
+        const d_date_dayOfWeek = daysOfWeek[d_date.getDay()]
+  
+        //departure 
+        const [departure_hour, departure_minutes] = departure_time.split(':')
+  
+        //arrival
+        const [arrival_hour, arrival_minutes] = arrival_time.split(':')
+  
+        const li = document.createElement('li');
+        li.classList.add('courses__listElement')
+        li.classList.add('listElement')
+  
+        li.innerHTML = `
+                <div class="listElement__dateContainer">
+                  <p class="listElement__dayName">${d_date_dayOfWeek}</p>
+                  <h2>${d_date_day} ${d_date_month}, ${d_date_year}</h2>
+                </div>
+  
+  
+                <div class="listElement__route">
+                  <div class="listElement__border"></div>
+  
+                  <div class="listElement__content">
+                    <div class="listElement__departure">
+                      <p class="listElement__departureTime">${departure_hour}:${departure_minutes}</p>
+                      <p class="listElement__departurePlace">${from_bus_stop_name}</p>
+                    </div>
+  
+                    <p class="listElement__duration">Duration: <span>${hours}H ${minutes}M</span></p>
+      
+                      <div class="listElement__arrival">
+                        <p class="listElement__arrivalTime">${arrival_hour}:${arrival_minutes}</p>
+                        <p class="listElement__arrivalPlace">${to_bus_stop_name}</p>
+                      </div>
+                  </div>
+                </div>
+    
+                <div class="listElement__summary">
+                  <h2 class="listElement__priceContainer"><span class="listElement__regularPrice">${regularPrice} zł</span>${lowestPrice} zł</h2>
+                  <button class="listElement__finishShopping">KUP TERAZ</button>
+                </div>`;
+      
+        coursesList.appendChild(li)
+        
+      })
+
+    }
+
+  // arrays for date
+  const months = ['styczeń','luty','marzec','kwiecień','maj','czerwiec','lipiec','sierpień','wrzesień','październik','listopad','grudzień' ],
+        daysOfWeek = ['niedziela', 'poniedziałek', 'wtorek', 'środa', 'czwartek', 'piątek', 'sobota']
+
+  //submit functions
   
   function onSubmit(e) {
     e.preventDefault()
-    let data = new FormData(form);
-    let dataObj = Object.fromEntries(data)
+
+    coursesSection.style.display = 'block';
+
+    const data = courses.courses
+    if(previousData == null) {
+      previousData = data
+    } else if (previousData == data) {
+      return
+    } else {
+      coursesList.innerHTML = ''
+    }
+
+    fillList(data, coursesList)
+
+    buyNowButtons = [...document.querySelectorAll('.listElement__finishShopping')]
+    buyNowButtons.map( item => {
+      item.addEventListener('click', () => {
+        //sprawdzam countdown
+          if(!interval) {
+            startTimer(849, counter)
+          } else {
+            clearInterval(interval)
+            startTimer(849, counter)
+          }
+          //sprawdzam czy jest data powrotu
+
+          //jesli nie ma daty powrotu
+          if(!returnDate.valueAsDate) {
+            alert('przejście do koszyka 1 button')
+          //jesli jest data powrotu
+          } else {
+            coursesList.style.transform = 'translateX(-100%)'
+            coursesList.style.opacity = 0
+
+            fillList(data, returnCoursesList)
+            
+            setTimeout( () => {
+              coursesList.style.display = 'none'
+              returnCoursesList.style.opacity = 1;
+            }, 500)
+
+            buyNowButtonsReturn = [...returnCoursesList.querySelectorAll('.listElement__finishShopping')]
+
+            buyNowButtonsReturn.map( item => {
+
+              item.addEventListener('click', () => {
+                if(!interval) {
+                  startTimer(849, counter)
+                } else {
+                  clearInterval(interval)
+                  startTimer(849, counter)
+                }
+                alert('przejscie do koszyka z 2 buttona')
+              })
+
+            })
+          }
+      })
+    })
   }
 
+
 </script>
+
+
+
+
+<!-- let data = new FormData(form);
+let dataObj = Object.fromEntries(data) -->
+
+
+
+<!-- <div class="listElement__container">
+  <p class="listElement__dayName">Piątek</p>
+  <h2>25 listopada, 2021</h2>
+</div>
+
+
+<div class="listElement__route">
+  <div class="listElement__border"></div>
+
+  <div class="listElement__content">
+    <div class="listElement__departure">
+      <p class="listElement__departureTime">06:24</p>
+      <p class="listElement__departurePlace">Białystok- Dworzec PKS</p>
+    </div>
+
+    <p class="listElement__duration">Duration: <span>2H 35M</span></p>
+
+      <div class="listElement__arrival">
+        <p class="listElement__arrivalTime">08:04</p>
+        <p class="listElement__arrivalPlace">Warszawa - Lotnisko</p>
+      </div>
+  </div>
+</div>
+
+<div class="listElement__finishShopping">
+  <h2>320 zł</h2>
+  <button>KUP TERAZ</button>
+</div>
+
+</li> -->

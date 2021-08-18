@@ -186,6 +186,16 @@
         width: 48px;
         background-color: $c-border-dark;
         border-radius: 4px;
+
+        position: relative;
+        .counter {
+            position: absolute;
+            bottom: -4px;
+            margin-bottom: 0;
+            font: normal normal 600 10px/24px $ff-paragraphs;
+            //medium
+            color: white;
+        }
     }
 
     &__customers {

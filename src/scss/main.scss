@@ -3,9 +3,11 @@
 @import "_variables";
 @import "modules/mixins.scss";
 
-@import "modules/nav.scss";
-@import "modules/hero.scss";
 @import "modules/burger.scss";
+@import "modules/courses.scss";
+@import "modules/footer.scss";
+@import "modules/hero.scss";
+@import "modules/nav.scss";
 
 body {
   display: flex;
